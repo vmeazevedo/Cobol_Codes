@@ -1,0 +1,5 @@
+- Arquivos JCL se iniciam com // seguidos do nome da biblioteca
+- Um arquivo JCL contem 3 itens:
+PROG: É usado para identificar o parametro que vamos compilar
+BIBF: É a biblioteca fonte, onde está o programa.
+BIBC: É a biblioteca objeto, onde vamos hospedar nosso programa.

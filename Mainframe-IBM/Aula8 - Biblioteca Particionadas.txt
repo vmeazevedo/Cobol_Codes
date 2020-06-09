@@ -1,0 +1,50 @@
+No PC (Diretorios/Subdiretorios)
+C:\HERC01\PRIVLIB\SOURCE
+C:\HERC01\PRIVLIB\LOAD
+ARQUIVO-1
+
+No Mainframe IBM (Bibliotecas particionadas)
+HERC01.PRIVLIB.SOURCE
+HERC01.PRIVLIB.LOAD
+MEMBER1
+
+HERC01 = PROJETO
+PRIVLIB = BIBLIOTECA
+SOURCE = TIPO
+*Nome podem ter no máx 8 chars.
+
+====================================================
+- PRATICA
+====================================================
+Abrir o MVS
+Abrir o Emulador
+Na tela do inicial vamos verificar nossas bibliotecas particionadas
+
+Selecione as opções:
+1 RFE
+3 UTILITIES - PERFORM UTILITY FUNCTIONS
+4 DSLIST - PROCESS DATA SETS FROM A CATALOG OR VTOC LIST
+
+No campo 'Data set name prefix' => Digite o nome de usuário
+Vamos abrir a biblioteca: HERC01.REVPROF, digitando 'e' na frente dela para editar.
+
+====================================================
+MODOS DE VISUALIZAÇÃO DE ARQUIVOS
+====================================================
+b  = browse (visualizar sem modificar)
+e = edit (visualizar e modificar)
+s = show (mostra os membros'arquivos')
+d = delete (apaga os membros)
+
+
+
+
+
+
+
+
+
+
+
+
+

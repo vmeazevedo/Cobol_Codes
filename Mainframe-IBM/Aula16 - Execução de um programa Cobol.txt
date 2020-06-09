@@ -1,0 +1,16 @@
+1 - Desenvolver o programa cobol
+2 - Codifique o programa no editor ISPF.
+3 - Compile o programa e 'linkeditar'.
+4 - Depurando possíveis erros de compilação.
+5 - Mais uma vez, compile o programa e 'linkeditar'.
+6 - Disponibilize os arquivos que o programa usará.
+7 - Faça o JCL do programa.
+8 - Execute o programa.
+9 - Revise os resultados.
+
+
+- Abrir o MVS
+- Digitar 1.3.4
+- Abrir a biblioteca fonte
+- Entrar no arquivo RUN100
+- Executar o SUB

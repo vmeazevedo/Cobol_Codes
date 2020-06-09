@@ -1,0 +1,32 @@
+- Baixar o emulador do site
+http://www.hercules-390.eu/
+Windows Binaries
+hercules-3.13-w64.msi
+
+- Salvando arquivo uma pasta no C: com o nome:
+Emulador-3270
+MVS-TK4
+
+- Baixar o MVS no site e coloque ele na pasta MVS-TK4:
+http://wotho.ethz.ch/tk4-/
+
+-Extraia os arquivos dentro da pasta
+
+- Abra a pasta conf e procure um arquivo chamado tk4
+Dentro do arquivo procure o item TZOFFSET +0000
+E troque o valor +0000 por +0600
+Salve o arquivo
+
+
+- Abra o CMD e digite os comandos abaixo:
+
+C:\Windows\system32>cd ..
+C:\Windows>cd..
+C:\>cd mvs-ibm
+C:\MVS-IBM>cd mvs-tk4
+C:\MVS-IBM\MVS-TK4>cd unattended
+C:\MVS-IBM\MVS-TK4\unattended>set_console_mode.bat
+Hercules console mode activated for unattended operations (mvs.bat)
+Press any key to continue...
+
+Pressione enter (Y)

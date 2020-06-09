@@ -1,0 +1,167 @@
+==================================================================
+ISPF - Interactive System Productivity Facility
+==================================================================
+- Um conjunto de ferramentas para usar o sistema IBM MVS.
+- Inclui um editor de tela - vamos praticá-lo.
+- Ele fornece em terminais 3270 e emulações uma interface com menus e diálogos para executar ferramentas do sistema.
+
+- Inicie o MVS e digite o comando 1.3.4
+RFE
+UTILITIES
+DSLIST
+
+- De enter na biblioteca HERC01
+- Abra a biblioteca HERC01.PRIVLIB.SOURCE com o comando 'e'.
+- Abra o PROG0100 com o comando 's'.
+
+
+==================================================================
+PRATICANDO ALGUNS COMANDOS
+==================================================================
+Na coluna onde é mostrado a númeração podemos utilizar os comandos:
+
+I = inclui uma linha ao código atual e permite add algo escrito a ele
+I5 = inclui 5 linhas no código atual, o número digitado pode ser qualquer um mediante da necessidade do programador.
+D = deleta uma linha do código
+DD = utilizamos para apagar um bloco inteiro de informação, deve ser colocar o DD na linha inicial que queremos apagar e DD na linha final, o que irá apagar todo o conteúdo entre as linhas selecionadas.
+R = repete todos os dados da linha selecionada (Tipo um copiar/colar)
+RR = repete todo o conteúdo de um bloco selecionado (Tipo um copiar/colar)
+
+==================================================================
+COPIAR E COLAR
+==================================================================
+- Colocamos C na linha que queremos copiar e A na linha que queremos colar, sendo C copiar e A after que represeta embaixo da linha.
+Exemplo:
+C000047		WORKING-STORAGE SECTION
+0A00053		01	WS-TITULO-1.
+A linha 47 será copiada para debaixo da linha 53.
+
+- Colocamos C na linha que queremos copiar e A na linha que queremos colar, sendo C copiar e B before que representa em cima da linha.
+Exemplo:
+C000047		WORKING-STORAGE SECTION
+0B00053		01	WS-TITULO-1.
+A linha 47 será copiada para cima da linha 53.
+
+O mesmo funciona para copiar blocos inteiros de informações.
+
+==================================================================
+MOVER
+==================================================================
+- Colocamos MM na linha que queremos mover e indicamos com outro MM até onde iremos selecionar o que será movido. Após isso selecionamos para onde o bloco deve ser movido com o comando A ou B (AFTER/BEFORE)
+Exemplos:
+MM0060		01	WS-TITULO-2
+000061			05 FILLER
+000062			05 WS-TIT-2-DIA
+00MM63			05 FILLER
+
+Usamos A para mover depois da linha:
+0000A1		01	WS-SUB-TITULO-1
+Ou B para mover para antes da linha:
+0000B1		01	WS-SUB-TITULO-1
+
+
+==================================================================
+INDENTAÇÃO DE CÓDIGO
+==================================================================
+- Para mover uma linha para direita utilizamos o ')' que indica a movimentação da linha para a direita e após isso indicamos um número que irá significar quantas vezes movemos a linha.
+Exemplo:
+000061			05 FILLER
+)50062			05 WS-TIT-2-DIA
+
+000061			05 FILLER
+000062			        05 WS-TIT-2-DIA
+
+- Para mover uma linha para a esquerda utilizamos o '(' que indica a movimentação da linha para a esquerda e após isso indicamos um número que irá significar quantas vezes movemos a linha.
+
+000061			05 FILLER
+(50062			        05 WS-TIT-2-DIA
+
+000061			05 FILLER
+000062			05 WS-TIT-2-DIA
+
+----------------------------------------------------------------------------------------------------------------------
+Na linha de comando, COMMAND ===>
+==================================================================
+COMANDO - COLS
+==================================================================
+- Acrescenta uma regra ao cabeçalho do programa, o qual ajuda na indentação do código.
+
+==================================================================
+COMANDO - RES
+==================================================================
+- Volta ao parâmetro original que havia antes, similar ao control+z.
+
+==================================================================
+COMANDO - SAVE
+==================================================================
+- Salva as alterações realizadas dentro de um arquivo, similar ao control+s.
+
+==================================================================
+COMANDO - C		#CHANGE
+==================================================================
+- Permite altera um item do código por outro item, similar ao comando substituir do word.
+Exemplo, alterando o valor de um campos somente:
+COMMAND ===> C VALUE VALOR 
+Iremos alterar o primeiro item encontrado de VALUE por VALOR, importante estar com a tela posicionada onde queremos realizar a alteração.
+- Se pressionarmos F6 iremos continuar modificando os itens posteriores um por um.
+
+Exemplo, alterando o valor de todos os campos: 
+COMMAND ===> C VALUE VALOR ALL
+Iremos alterar todos os campos que tenha VALUE por VALOR.
+
+==================================================================
+COMANDO - CREATE
+==================================================================
+- Com esse comando nós podemos selecionar um pedaço do código especifico e criar um novo arquivo contendo os dados selecionados.
+Exemplo:
+CC0013		ENVIRONMENT DIVISION.
+000013		CONFIGURATION SECTION.
+00CC13		SOURCE-COMPUTER.		IBM-3083
+
+COMMAND ===> CREATE A2
+
+- Abrindo o novo arquivo chamado A2
+000001		ENVIRONMENT DIVISION.
+000002		CONFIGURATION SECTION.
+000003		SOURCE-COMPUTER.		IBM-3083
+
+==================================================================
+COMANDO - COPY
+==================================================================
+- Com esse comando podemos copiar os dados de um outro código para o nosso código principal. Devemos indicar com o A onde iremos colar o código e na linha de comando digitamos COPY. Posteriormente indicamos o nome do arquivo que queremos copiar e pressionamos enter.
+Exemplo:
+A00023		DATA DIVISION. 
+
+COMMAND ===> COPY
+
+SPECIFY INPUT SEQUENTIAL DATA SET NAME
+	==> 'HERC01.PRIVLIB.SOURCE(A2)'
+Pressione enter.
+
+- Resultado:
+000024		DATA DIVISION. 
+000025		ENVIRONMENT DIVISION.
+000026		CONFIGURATION SECTION.
+000027		SOURCE-COMPUTER.		IBM-3083
+
+
+==================================================================
+COMANDO - F			#FIND
+==================================================================
+- Com esse comando podemos encontrar alguma palavra em nosso código.
+COMMAND ===> F DATA
+Se pressionarmos F5 iremos continuar buscando as próximas palavras.
+
+==================================================================
+COMANDO - CAN
+==================================================================
+- Cancela toda a alteração feita em um arquivo COBOL.
+
+==================================================================
+F3
+==================================================================
+- Sai do código aberto e salva tudo o que foi realizado nele.
+
+
+
+

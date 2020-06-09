@@ -1,0 +1,41 @@
+=====================================================================
+SIMULANDO UMA COMPILAÇÃO
+=====================================================================
+
+- Abra o MVS
+- Digite o comando 1.3.4
+- Entre na biblioteca fonte
+- Acesse o arquivo de compilação - COMPILA:
+Dentro dele deve conter os itens:
+PROG= ' PROG0100 ',
+BIBF= ' HERC01.PRIVLIB.SOURCE ',
+BIBC= ' HERC01.PRIVLIB.LOAD '
+
+- Em MSGCLASS, deixe H para apresentar o resultado no mainframe.
+- Na linha de comando, digite o comando: Command ===> SUB
+- Pressione F2 para criar uma nova aba
+- Digite a opção 3.8, para visualizar o resultado da compilação
+- Acesse o arquivo HERC01A com o comando S	
+- Verifique no cabeçalhos se o Retcode estão:
+RC = 0004
+RC = 0000
+Seu programa executou sem problemas!
+
+=====================================================================
+SIMULANDO ERROS
+=====================================================================
+
+- Retorne ao arquivo PROG0100 e na linha 056 trocamos a aspas simples por aspas duplas, para gerar um erro.
+- Acesse o arquivo compila e mude o nome para C para criar um novo arquivo.
+- Em MSGCLASS, deixe H para apresentar o resultado no mainframe.
+- Digite o comando SUB para rodar o novo arquivo com o erro proposital.
+
+- Pressione F2 para criar uma nova aba
+- Digite a opção 3.8, para visualizar o resultado da compilação
+- Acesse o arquivo HERC01C com o comando S	
+- Verifique no cabeçalhos se o Retcode estão:
+RC = 0012
+*FLUSH*
+Seu programa tem algum erro, role a pagina até a ultima linha para verificar a mensagem de erro apresentada.
+
+

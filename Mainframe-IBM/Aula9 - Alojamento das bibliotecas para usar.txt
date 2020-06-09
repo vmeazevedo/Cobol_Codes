@@ -1,0 +1,80 @@
+=================================================================
+BIBLIOTECAS DO TIPO:
+=================================================================
+Fonte : Onde vamos guardar nossos programas cobol.
+
+Objeto: Onde vamos guardar nossos programas com objetos (já compilados, 'vinculados' e prontos para sua execução).
+
+=================================================================
+CRIANDO A BIBLIOTECA FONTE
+=================================================================
+- Para hospedar bibliotecas iremos utilizar a opção 1.3.2:
+RFE
+UTILITIES
+DATASET 
+
+- Nomear a TSO Library:
+PROJECT ===> HERC01
+LIBRARY  ===> PRIVLIB
+TYPE  ===> SOURCE
+
+Em COMMAND ===> digite A e pressione enter:
+Legenda:
+A  	ALLOCATE NEW DATA SET
+D 	DELETE ENTIRE DATA SET
+R 	RENAME ENTIRE DATA SET
+U 	UNCATALOG DATA SET
+
+- Agora será necessario configurar alguns parâmetros adicionais
+RECORD FORMAT ==> FB			#Feature Bloqueado
+LOGICAL RECORD LENGHT ==> 80		#Como é uma lib fonte usasse 80
+PHYSICAL BLOCK SIZE ==> 19040		
+
+ALLOCATION SPACE UNITY ==> C		#T=TRACK - C =CILINDRO
+PRIMARY SPACE QUANTITY ==> 10
+SECONDARY SPACE QUANTITY ==> 5
+NUMBER OF DIRECTORY BLOCKS ==> 5
+
+- Pressione enter, no canto superior esquerdo estará escrito: Data set created
+
+- Pressionar F3 para voltar, e dar o comando 4
+DSLIST
+- Pressione enter.
+- Sera apresentado a biblioteca que acabamos de criar
+- Caso dermos um S nessa biblioteca, será nos apresentado todas as configurações
+
+=================================================================
+CRIANDO A BIBLIOTECA OBJETO
+=================================================================
+- Para hospedar bibliotecas iremos utilizar a opção 1.3.2:
+RFE
+UTILITIES
+DATASET 
+
+Em COMMAND ===> digite A e pressione enter:
+Legenda:
+A  	ALLOCATE NEW DATA SET
+D 	DELETE ENTIRE DATA SET
+R 	RENAME ENTIRE DATA SET
+U 	UNCATALOG DATA SET
+
+- Agora será necessario configurar alguns parâmetros adicionais
+RECORD FORMAT ==> U			
+LOGICAL RECORD LENGHT ==> 0		#Como é um objeto usasse 0
+PHYSICAL BLOCK SIZE ==> 19040		
+
+ALLOCATION SPACE UNITY ==> C		#T=TRACK - C =CILINDRO
+PRIMARY SPACE QUANTITY ==> 10
+SECONDARY SPACE QUANTITY ==> 5
+NUMBER OF DIRECTORY BLOCKS ==> 5
+
+- Pressione enter, no canto superior esquerdo estará escrito: Data set created
+
+- Pressionar F3 para voltar, e dar o comando 4
+DSLIST
+- Pressione enter.
+- Sera apresentado a biblioteca que acabamos de criar
+- Caso dermos um S nessa biblioteca, será nos apresentado todas as configurações
+
+
+

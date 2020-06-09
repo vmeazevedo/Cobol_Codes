@@ -1,0 +1,7 @@
+Rodar o MVS no cmd
+C:\ cd mvs-ibm\mvs-tk4\mvs
+
+
+-Verificar os processos que estão ativos
+
+herc ====>  /d a,l

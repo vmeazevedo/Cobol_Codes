@@ -1,0 +1,72 @@
+- Usamos F8 para dar PageDown
+- Usamos F7 para dar Pageup
+
+==================================================================
+TRANSFERINDO UM ARQUIVO DO PC PARA O MAINFRAME
+==================================================================
+
+- Entre no MVS e selecione 1.6
+RFE
+COMMAND
+
+Será aberta uma linha de comando.
+
+- Abra o menu Transfer na barra de menu, e selecione a opção Sendo to Host.
+Iremos enviar um arquivo que está em nosso computador para nosso mainframe
+
+- Em Source- PC File, selecione o diretório onde os arquivos COBOL estão:
+Exemplo: C:\Cobol\Programas
+
+- Ainda em Source - PC File, selecione o arquivo que quer enviar clicando nele.
+
+- Em Targe - Host File, devemos especificar em aspas simples a que biblioteca particionada vamos enviar e com qual nome.
+Exemplo: 'HERC01.PRIVLIB.SOURCE(PROG0100)'
+
+- Clique em Send, para enviar ao mainframe.
+
+- Vamos verificar agora se a transferência ocorreu sem problemas, damos um F3 para voltar ao menu anterior.
+Entramos com o comando 3.4
+UTILITIES
+DSLITS
+
+- Pressionamos enter para entrar na biblioteca HERC01 e abrimos o arquivo .SOURCE com o comando 'e'.
+
+- Sera apresentado o arquivo TXT que transferimos do PC, e com o comando 's' poderemos ver o conteúdo interno do arquivo com o código Cobol.
+
+==================================================================
+TRANSFERINDO UM ARQUIVO DO MAINFRAME PARA O PC
+==================================================================
+- Entre no MVS e selecione 1.6
+RFE
+COMMAND
+
+Será aberta uma linha de comando.
+
+- Abra o menu Transfer na barra de menu, e selecione a opção Receive from Host.
+
+- Em Source- Host File, devemos especificar em aspas simples a que biblioteca particionada e o nome.
+Exemplo: 'HERC01.PRIVLIB.SOURCE(PROG0100)'
+
+- Em Targe - Host File, devemos selecionar o diretório onde os arquivos COBOL serão salvos.
+Exemplo: C:\Cobol\Programas
+
+- Clique em Receive, para enviar ao PC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

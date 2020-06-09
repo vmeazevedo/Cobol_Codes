@@ -1,0 +1,36 @@
+Procedimento de transferência e compilação de arquivos JCLs
+
+- Para compilar, você precisa de uma JCL de compilação.
+- JCL - Linguagem de Controle de Tarefa. Ordens dadas ao sistema operacional para executar a sequência de tarefas.
+- E deve haver o procedimento (etapas a serem executadas) que chama o JCL.
+- Programa, compilação e execução JCL residem em nossa biblioteca privada.
+- O procedimento reside em uma biblioteca do sistema (SYS2.PROCLIB).
+
+==================================================================
+IMPORTANTE ARQUIVOS JCL
+==================================================================
+
+- Abra o MVS para realizarmos as transferências dos arquivos.
+- Vamos em 1.3.4 apagar o arquivo da aula anterior primeiramente
+- Depois disso iremos para 1.6 na linha de comando para realizarmos a transferência.
+- Vamos transferir os arquivo PROG0100, COMPILA e RUN100 na biblioteca:
+HERC01.PRIVLIB.SOURCE.
+- E por ultimo iremos transferir o aquivo COBOL na biblioteca:
+SYS2.PROCLIB.
+
+- Vamos validar se a transferência ocorreu normalmente, voltando para o menu inicial digitamos 1.3.4 para acessar as bibliotecas.
+
+Em Data set name prefix ==> , vamos verificar primeiro:
+- Data set name prefix ==> herc01
+- Acessar a biblioteca SOURCE com o B para ver os itens internos
+- Verifique os arquivos com o comando S.
+
+Retorne para o Data set name prefix ==>.
+- Agora vamos verificar que a outra biblioteca que importamos está tudo bem.
+-Data set name prefix ==> sys2.proclib
+- Acessar a biblioteca SYS2 com o B para ver os itens internos
+- Sera apresentado uma lista de arquivos, como queremos somente o arquivo Cobol digitamos na linha de comando:
+- Command ===> l cobol
+- Sera apresentado o arquivo que importamos, verifique ele com o comando S.
+
+
