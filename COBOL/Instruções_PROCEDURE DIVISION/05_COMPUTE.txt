@@ -1,0 +1,12 @@
+====================================================================
+COMPUTE
+====================================================================
+Nos permite realizar operações algebricas utilizando operadores aritméticos (+, -, *, /, **)
+
+COMPUTE <Nome-Campo-1> = <Expressão Aritmética>
+	COMPUTE WS-LIDOS       = WS-LIDOS + 1
+	COMPUTE WS-SALDO-TOTAL = (WS-SALDO + WS-SALDO-REAL) * 1.16
+	COMPUTE WS-UTILIDADE   = WS-VENDAS - WS-GASTOS
+
+Obs: O resultado sempre será apresentado no campo após o COMPUTE.
+====================================================================

@@ -3,7 +3,7 @@
       *-----------------------------------------------------------------
        PROGRAM-ID.     04_SUBTRACT.
        AUTHOR.         VINICIUS AZEVEDO.
-       DATE-WRITTEN.   08/06/2020.
+       DATE-WRITTEN.   09/06/2020.
        DATE-COMPILED.
        SECURITY.       NAO E CONFIDENCIAL.
       ******************************************************************

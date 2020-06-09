@@ -1,0 +1,17 @@
+====================================================================
+DIVIDE
+====================================================================
+Divide o conteúdo de um campo-x entre outro campo-y ou uma literal.
+
+DIVIDE <Nome-Campo-1 ou Literal> INTO <Nome-Campo-2>
+	DIVIDE 0.16	INTO WS-IMPORTE
+	DIVIDE WS-SALDO INTO WS-SALDO-ACUMULADO
+
+Obs: O resultado da divisão se encontra no campo que colocamos após o INTO.
+====================================================================
+DIVIDE <Nome-Campo-1 ou Literal> INTO <Nome-Campo-2 ou Literal> GIVING <Nome-Campo-3>
+	DIVIDE 0.16	INTO WS-IMPORTE GIVING WS-IMP-SIN-IVA
+	DIVIDE WS-SALDO INTO WS-SALDO-ACUMULADO GIVING WS-SALDO-REAL
+
+Obs: O resultado da divisão se encontra no campo que colocamos após o GIVING.
+====================================================================

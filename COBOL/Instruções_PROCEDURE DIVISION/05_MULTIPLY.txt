@@ -15,4 +15,4 @@ MULTIPLY <Nome-Campo-1 ou Literal> BY <Nome-Campo-2 ou Literal> GIVING <Nome-Cam
 	MULTIPLY WS-SALDO BY WS-SALDO-ACUMULADO GIVING WS-SALDO-REAL
 
 Obs: O resultado da multiplicação se encontra no campo que colocamos após o GIVING.
-
+====================================================================
