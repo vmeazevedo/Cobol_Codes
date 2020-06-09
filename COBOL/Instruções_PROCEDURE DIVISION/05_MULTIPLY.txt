@@ -1,0 +1,18 @@
+====================================================================
+MULTIPLY
+====================================================================
+Multiplica o conteúdo de uma literal em um campo-x por outro campo-y.
+
+MULTIPLY <Nome-Campo-1 ou Literal> BY <Nome-Campo-2>
+	MULTIPLY 1.16	  BY WS-IMPORTE
+	MULTIPLY WS-SALDO BY WS-SALDO-ACUMULADO
+
+Obs: O resultado da multiplicação se encontra no campo que colocamos após o BY.
+
+====================================================================
+MULTIPLY <Nome-Campo-1 ou Literal> BY <Nome-Campo-2 ou Literal> GIVING <Nome-Campo-3>
+	MULTIPLY 1.16	  BY WS-IMPORTE GIVING WS-IMP-IVA
+	MULTIPLY WS-SALDO BY WS-SALDO-ACUMULADO GIVING WS-SALDO-REAL
+
+Obs: O resultado da multiplicação se encontra no campo que colocamos após o GIVING.
+

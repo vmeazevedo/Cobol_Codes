@@ -1,0 +1,104 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.                PROG0010.
+       AUTHOR.                    VINICIUS AZEVEDO.
+       INSTALATION.               CENTRO DE CAPACITACION..
+       DATA-WRITEN.               05/06/2020.
+       DATA-COMPILED.
+       SECURITY.                  NO ES CONFIDENCIAL.
+      *----------------------------------------------------------------*
+      *OBJETIVO: LER E IMPRIMIR O ARQUIVO DOS EMPREGAGOS DA EMPRESA.   *
+      *----------------------------------------------------------------*
+
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER.           IBM-3083.
+       OBJECT-COMPUTER.           IBM-3083.
+
+       INPUT-OUTSECTION.
+       FILE-CONTROL.
+           SELECT EMPLEADOS ASSIGN TO UT-S-EMPLEADO.
+           SELECT REPORTE   ASSIGN TO UT-S-REPORTE.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  EMPLEADOS
+           LABEL RECORDS ARE STANDARD
+           RECORD CONTAINS 50 CHARACTERS
+           BLOCK CONTAINS 0 RECORDS
+           DATA RECORD IS REG-EMPLEADOS.
+       01  REG-EMPLEADOS          PIC X(50).
+
+       FD  REPORTE
+           LABEL RECORDS ARE STANDARD
+           RECORD CONTAINS 50 CHARACTERS
+           BLOCK CONTAINS 0 RECORDS
+           DATA RECORD IS REG-REPORTE.
+       01  REG-REPORTE            PIC X(50).
+
+       WORKING-STORAGE SECTION.
+       01  WS-AREA-A-USAR.
+           05 WS-REG-EMPLEADOS.
+              10 WS-NUMERO-EMP    PIC 9(5).
+              10 WS-NOMBRE-EMP    PIC X(30).
+              10 WS-STATUS-EMP    PIC 9(1).
+              10 WS-DEPTO-EMP     PIC 9(3).
+              10 WS-PUESTO-EMP    PIC 9(2).
+              10 WS-SALARIO-EMP   PIC 9(7)V99.
+           05 WS-LEIDOS-EMP       PIC 9(5)     VALUE ZEROS.
+           05 WS-IMPRESSOS        PIC 9(5)     VALUE ZEROS.
+           05 WS-TOTAL-SALARIOS   PIC 9(9)V99. VALUE ZEROS.
+
+       01  WS-TITULO-1.
+           05 FILLER              PIC X(28)    VALUE SPACES.
+           05 WS-TIT-1            PIC X(23)
+                                  VALUE "EMPLEADOS DE LA EMPRESA".
+           05 FILLER              PIC X(29)    VALUE SPACES.
+
+       01  WS-DETALLE.
+           05 FILLER              PIC X(15)    VALUE SPACES.
+           05 WS-DET-TODO         PIC X(50).
+           05 FILLER              PIC X(15)    VALUE SPACES.
+
+       01  WS-DETALLE-LEIDOS.
+           05 FILLER              PIC X(01)
+           05 FILLER              PIC X(29)
+                                  VALUE "TOTAL DE EMPLEADOS LEIDOS  : ".
+           05 WS-TOT-LEIDOS       PIC 9(5).
+           05 FILLER              PIC X(45)    VALUE SPACES.
+
+       01  WS-DETALLE-IMPRESOS REDEFINES WS-DELLE-LEIDOS.
+           05 FILLER              PIC X(1)
+           05 FILLER              PIC X(29)
+                                  VALUE "TOTAL DE EMPLEADOS IMPRESOS: ".
+           05 WS-TOT-IMPRESOS     PIC 9(5).
+           05 FILLER              PIC X(45)    VALUE SPACES.
+
+       LINKAGE SECTION.
+       01 LK-FECHA.
+          05 FILLER               PIC X(2).
+          05 LK-DIA               PIC 9(2).
+          05 LK-MES               PIC 9(2).
+          05 LK-ANO               PIC 9(4).
+
+       PROCEDURE DIVISION USING LK-FECHA.
+       010-INICIO.
+           OPEN INPUT  EMPLEADOS
+                OUTPUT REPORTE
+           WRITE REG-REPORTE FROM WS-TITULO-1.
+       020-LEE.
+           READ EMPLEADOS INTO WS-REG-EMPLEADOS AT END
+                GO TO 100-FIN.
+           ADD 1 TO WS-LEIDOS-ENP
+           MOVE WS-REG-EMPLEADOS TO WS-DET-TODO
+           WRITE REG-REPORTE FROM WS-DETALLE
+           ADD 1 TO WS-IMPRESOS
+           GO TO 020-LEE.
+
+       100-FIN.
+           MOVE WS-LEIDOS-EMP TO WS-TOT-LEIDOS
+           WRITE REG-REPORTE FROM WS-DETALLE-LEIDOS
+           MOVE WS-IMPRESOS   TO WS-TOT-IMPRESOS
+           WRITE REG-REPORTE FROM WS-DETALLE-IMPRESOS
+           CLOSE EMPLEADOS
+                 REPORTE
+          GOBACK.

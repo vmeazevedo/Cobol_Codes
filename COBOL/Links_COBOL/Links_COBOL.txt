@@ -1,0 +1,8 @@
+Cobol básico
+DB2 Básico
+http://www.cadcobol.com.br/menu_db2.htm
+
+IMS ou CICS básico
+http://www.cadcobol.com.br/menu_cics.htm
+
+Vsam básico 

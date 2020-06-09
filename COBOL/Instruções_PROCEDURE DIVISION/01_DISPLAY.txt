@@ -1,0 +1,10 @@
+- Mostra informação na aba de reporte
+
+DISPLAY <Literal>
+	DISPLAY "TECLE A CONTA"
+
+DISPLAY <Nome-Campo>
+	DISPLAY WS-SALDO
+
+DISPLAY <Literal> <Nome-Campo>
+	DISPLAY "TOTAL DE REGISTROS LIDOS: " WS-LIDOS

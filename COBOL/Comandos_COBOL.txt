@@ -1,0 +1,32 @@
+Comandos de Linha:
+
+COLS = Nos coloca uma regua sobre uma linha.
+Delete (D) = Apaga uma linha.
+Insert (I) = Inserir uma linha
+Repeat (R) = Repete uma linha
+Repeat blocos (RR) = Repete blocos de linhas
+Mover (M) = Move uma linha para outro lado*
+Mover blocos (MM) = Move blocos de linhas para outro lado
+Copy (C) = Copia uma linha de um lugar para outro
+Copy blocos (CC) = Copia blocos de linhas
+Mover para direita ')' = Move o numero de caracteres para direita
+Mover para esquerda '(' = Move o numero de caracteres para esquerda
+
+Comandos primários:
+CANCEL (CAN) = Cancela a edição sem atualizar e volta ao menu anterior
+SAVE (SAVE) = Atualiza e volta ao menu anterior
+CHANGE (C) = Troca valores de um texto por outro. Com F6 segue trocando.
+   Exemplo: C PIC POC
+RES = Restaura a alteração realizada
+COPY = Copia um arquivo externo a nosso arquivo editado.
+CREATE = Cria parte de um bloco de nosso arquivo em outro arquivo.
+END = Volta ao menu anterior
+FIND (F) = Busca um texto em todo o arquivo. Com F5 segue buscando.
+   Exemplo: F COMPUTE
+HELP = Mostra o manual
+HEX = Mostra em hexadecimal o valor de um caractere. Em ANSI o valor 20 em hex é um espaço. Em EBCDIC o 40 é um espaço.
+HEX OFF = Sai do modo hexadecimal.
+
+F7 =	Retroceder
+F8 = 	Avançar
+

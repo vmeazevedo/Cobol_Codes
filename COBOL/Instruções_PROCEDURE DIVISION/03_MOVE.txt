@@ -1,0 +1,33 @@
+====================================================================
+MOVE
+====================================================================
+Move um campo ou uma literal a outro campo.
+
+MOVE <Nome-Campo-1 ou Literal> TO <Nome-Campo-2>
+	MOVE 1			TO WS-PAGINA
+	MOVE WS-SALDO		TO WS-DET-SALDO
+	MOVE WS-NOME		TO WS-DET-NOME
+	MOVE "TOTAL DE LIDOS" 	TO WS-DET-LIDOS
+====================================================================
+
+
+====================================================================
+MOVE CORRESPONDING
+====================================================================
+WORKING-STORAGE SECTION.
+01  WS-NOME-NPM
+    05 WS-NOME		PIC X(30).
+    05 WS-PATERNO	PIC X(30).
+    05 WS-MATERNO	PIC X(30).
+
+01  WS-NOME-PMN
+    05 WS-PATERNO	PIC X(30).
+    05 WS-MATERNO	PIC X(30).
+    05 WS-NOME 		PIC X(30).
+
+MOVE CORRESPONDING <Nome-Campo-1> TO <Nome-Campo-2>
+	MOVE CORRESPONDING WS-NOME-NPM TO WS-NOME-PMN
+
+OBS: Irá mover os campos respectivos aos outros campos respectivos.
+Ex: (Nome para Nome, Paterno para Paterno, etc...)
+====================================================================

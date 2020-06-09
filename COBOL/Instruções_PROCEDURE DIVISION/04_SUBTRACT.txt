@@ -1,0 +1,19 @@
+====================================================================
+SUBTRACT
+====================================================================
+Resta o conteúdo de uma literal de um campo-x para outro campo-y.
+
+SUBTRACT <Nome-Campo-1 ou Literal> FROM <Nome-Campo-2>
+	SUBTRACT 1        FROM WS-GRAVADOS
+	SUBTRACT WS-SALDO FROM WS-SALDO-ACUMULADO
+
+Obs: O resultado da subtração está no campo que colocamos após o FROM.
+
+====================================================================
+SUBCTRACT <Nome-Campos-1 ou Literal> FROM <Nome-Campo-2 ou Literal> GIVING <Nome-Campo-3>
+    SUBTRACT 1	      FROM WS-GRAVADOS GIVING WS-TOT-GRAV
+    SUBTRACT WS-SALDO FROM WS-SALDO-ACUMULADO GIVING WS-SALDO REAL
+
+Obs: O resultado da subtração está no campo que colocamos após o GIVING.
+====================================================================
+

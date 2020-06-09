@@ -1,0 +1,37 @@
+ACCEPT <Nome-Campo>
+	ACCEPT WS-CONTA
+	ACCEPT WS-NOME
+====================================================================
+ACCEPT <Nome-Campo> FROM DATE
+	ACCEPT WS-DATA FROM DATE
+
+WORKING-STORAGE SECTION.
+	01 WS-DATA.
+	   05 WS-ANO	PIC 9(02).
+	   05 WS-MES	PIC 9(02).
+	   05 WS-DIA	PIC 9(02).
+====================================================================
+ACCEPT <Nome-Campo> FROM DAY
+	ACCEPT WS-DIAS-TRANSCURRIDOS FROM DAY
+
+WORKING-STORAGE SECTION.
+	01 WS-TRANSCURRIDOS.
+	   05 WS-ANO	PIC 9(02).
+	   05 WS-DIA	PIC 9(02).
+====================================================================
+ACCEPT <Nome-Campo> FROM DAY-OF-WEEK
+	ACCEPT WS-DIAS FROM DAY-OF-WEEK
+
+WORKING-STORAGE SECTION.
+	01 WS-DIA	PIC 9(01).
+
+OBS: 1=Segunda, 2=Terça, etc..
+====================================================================
+ACCEPT <Nome-Campo> FROM TIME
+	ACCEPT WS-HORA FROM TIME
+
+WORKING-STORAGE SECTION.
+	01 WS-HORA	PIC 9(08).
+
+Formato: hhmmssff
+====================================================================

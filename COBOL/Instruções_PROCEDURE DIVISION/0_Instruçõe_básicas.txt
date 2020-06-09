@@ -1,0 +1,38 @@
+===============================================================
+OPEN:
+OPEN INPUT / OUTPUT <Nome-Arquivo>
+	OPEN INPUT ARQUIVO-EMPREGADOS
+	OPEN OUTPUT REPORT-EMPREGADOS
+===============================================================
+READ:
+READ <Nome-Arquivo> INTO <WS-Registro> AT END <Instrução Imperativa>
+	READ ARQUIVO-EMPREGADOS INTO WS-REG-EMPREGADOS
+		AT END MOVE "S" TO SW-EOF.
+===============================================================
+WRITE:
+WRITE <Nome_Registro> FROM <WS-Registro>
+	WRITE REG-EMPREGADOS FROM WS-REG-EMPREGADOS
+
+WRITE <Nome_Registro> FROM <WS-Registro> AFTER ADVANCING <n> LINES
+	WRITE REG-REPORTE FROM WS-TITULO-1 AFTER 2
+===============================================================
+GO TO: 
+GO TO <Nome-Rotina>
+	GO TO 010-FINAL
+===============================================================
+ADD:
+ADD <WS-Campo ou Literal numérica> TO <WS-Campo2>
+	ADD 1 TO WS-LIDOS
+	ADD WS-SALDO TO WS-SALDO-TOTAL
+
+ADD <WS-Campo ou Literal> TO <WS-Campo2 ou Literal> GIVING <WS-CAMPO-3>
+	ADD WS-SALDO TO WS-SALDO-TOTAL GIVING WS-SALDO-FINAL
+===============================================================
+CLOSE:
+CLOSE <Nome-Arquivo>
+	CLOSE ARQUIVO-EMPREGADOS 
+===============================================================
+GOBACK / STOP RUN
+	GOBACK.
+	STOP RUN.
+===============================================================
