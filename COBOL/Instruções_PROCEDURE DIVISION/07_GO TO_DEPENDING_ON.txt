@@ -1,0 +1,17 @@
+=====================================================================
+GO TO DEPENDING ON
+=====================================================================
+Tranfere o controle a uma serie de rotinas dependendo de um campo.
+
+GO TO <Nome-Rotina1>
+      <Nome-Rotina2>
+      . . . . . . .
+ DEPENDING ON <Nome-Campo>
+
+GO TO 010-EFETUA-ALTA
+      020-EFETUA-BAIXA
+      030-EFETUA-CAMBIO
+      040-EFETUA-RETIRO
+ DEPENDING ON WS-OPCAO-MENU	
+
+=====================================================================

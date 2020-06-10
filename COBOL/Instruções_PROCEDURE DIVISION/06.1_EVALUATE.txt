@@ -1,0 +1,19 @@
+=====================================================================
+EVALUATE
+=====================================================================
+Avalia multiplas condições e as ações dependeram dos resultados.
+
+EVALUATE <Nome-Campo>
+ WHEN <Valor-Campo>
+  <Instrução>
+ WHEN <Valor-Campo>
+  <Instrução>
+  . . . . . 
+ WHEN OTHER
+  <Instrução>
+END-VALUATE
+
+Obs: Se nenhuma condição for atingida, o programa irá executar o WHEN OTHER e em seguida finalizar o EVALUATE.
+
+=====================================================================
+

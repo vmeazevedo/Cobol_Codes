@@ -1,0 +1,85 @@
+=====================================================================
+IF
+=====================================================================
+Avalia uma condição e dependendo dela, executa o que lhe dizemos.
+
+Condições: IS / IS NOT 
+	EQUAL 	=
+	LESS 	<
+	GREATER >
+
+Classes de condiççoes: NUMERIC, ALPHABETIC, ZEROS, SPACES
+
+IF <Campo-1> Condição <Campo-2 ou Literal ou Classe de condição>
+THEN
+   <Instruções ou NEXT SENTENCE>
+ELSE
+   <Instruções ou NEXT SENTENCE>
+END-IF
+
+=====================================================================
+#Utilizando o if com a condição IS NOT:
+
+IF WS-SALDO-ATUAL IS NOT NUMERIC
+THEN
+   DISPLAY 'SALDO INVALIDO: ' WS-SALDO-ATUAL
+ELSE
+   COMPUTE WS-SALDO-ATUAL = WS-SALDO-ATUAL + WS-SALDO-ANTERIOR
+END-IF
+
+
+#Utilizando o if com a condição EQUAL:
+
+IF WS-NOME EQUAL SPACES
+THEN
+   DISPLAY 'NOME EM BRACO: ' WS-NOME
+ELSE
+   DISPLAY 'NOME: ' WS-NOME
+END-IF
+
+
+#Utilizando o if com a condição NEXT SENTENCE. Caso a variável não for alfabética a próxima linha será a linha após o END-IF:
+
+IF WS-NOME IS NOT ALPHABETIC
+THEN
+   NEXT SENTENCE
+ELSE
+   COMPUTE WS-SALDO-ATUAL = WS-SALDO-ANTERIOR - WS-SALDO-ATUAL
+   MOVE WS-NOME TO WS-NOME-DET
+END-IF
+
+MOVE WS-SALDO-ATUAL TO WS-SALDO-TOTAL
+
+
+#Utilizando o if com a condição IS GREATER:
+
+IF WS-SALDO-ATUAL IS GREATER WS-SALDO-ANTERIOR
+THEN
+   COMPUTE WS-SALDO-ATUAL = WS-SALDO-ATUAL - WS-SALDO-ANTERIOR
+ELSE
+   COMPUTE WS-SALDO-ATUAL = WS-SALDO-ANTERIOR - WS-SALDO-ATUAL
+   MOVE WS-SALDO-ANTERIOR TO WS-SALDO-ACUMULADO
+END-IF
+
+MOVE WS-SALDO-ATUAL TO WS-SALDO-TOTAL
+
+=====================================================================
+=====================================================================
+POSSIBILIDADES DE ESCRITA DO COMANDO IF
+=====================================================================
+
+IF WS-SALDO-ATUAL IS GREATER WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL GREATER WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL > WS-SALDO ANTERIOR
+
+IF WS-SALDO-ATUAL IS LESS WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL LESS WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL < WS-SALDO ANTERIOR
+
+IF WS-SALDO-ATUAL IS EQUAL WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL EQUAL WS-SALDO ANTERIOR
+IF WS-SALDO-ATUAL = WS-SALDO ANTERIOR
+
+
+=====================================================================
+

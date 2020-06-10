@@ -1,0 +1,17 @@
+=====================================================================
+IF COM OPERADORES LÓGICOS (AND E OR)
+=====================================================================
+IF WS-SALDO-ATUAL > WS-SALDO-ANTERIOR AND WS-DATA = '161130'
+THEN
+   IF WS-IMPORTE < WS-ACUMULADO OR WS-IMPORTE2 = WS-IMPORTE3
+      MOVE WS-SALDO-ATUAL - WS-SALDO-ANTERIOR
+   ELSE
+      NEXT SENTENCE
+   END-IF
+ELSE
+   MOVE WS-SALDO-ANTERIOR TO WS-SALDO-ACUMULADO
+END-IF
+
+MOVE WS-SALDO-ATUAL TO WS-SALDO-TOTAL
+
+=====================================================================
