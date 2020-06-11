@@ -1,0 +1,17 @@
+=====================================================================
+IDENTIFICATION DIVISION
+=====================================================================
+- Primeira divisão e a mais simples de codificar.
+- Só é requirido para identificar dados do programa.
+- Não tem efeito algum na execução do programa.
+- Paragráfos (se codificação na coluna A, os valores na coluna 35):
+
+	PROGRAM-ID.		- Nome do programa
+	AUTHOR.			- Autor do programa
+	INSTALLATION.		- Instalaçção de onde se executa
+	DATE-WRITTEN.		- Data em que foi escrito
+	DATE-COMPILED.		- Data de compilação
+	SECURITY.		- Confidencialidade
+
+
+=====================================================================

@@ -1,0 +1,15 @@
+=====================================================================
+LINKAGE SECTION
+=====================================================================
+- Definição de campos igual que se faz na WORKING-STORAGE
+- Descreve os parâmetros formais de entrada e de retorno de dados
+- Se definem campos que outro programa externo nos enviará
+- Descreve os dados disponibilizados a partir de outro programa através da instrução CALL.
+
+Qualquer cláusula de descrição de dados pode ser usada para descrever itens na LINKAGE-SECTION, com essas exceções:
+
+- A cláusula VALUE não pode ser especificada para itens Nível-88 itens.
+- Se a cláusula VALUE for especificada para itens que não sejam o nível 88 na seção Linkage, ela será tratada como um comentário.
+- A cláusula EXTERNAL não pode ser especificada na seção Linkage.
+- A cláusula GLOBAL não pode ser especificada na seção Linkage.
+- A cláusula GLOBAL pode ser especificada para um nome de dado ou nome de condição na seção LINKAGE, com o número de nível 01. Quando GLOBAL é especificado em um item de dados de seção LINKAGE, um programa de origem contido pode se referir diretamente ao item pelo nome de O item de dados. 

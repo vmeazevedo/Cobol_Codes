@@ -1,0 +1,85 @@
+=====================================================================
+FILE SECTION
+=====================================================================
+FD - DESCRIÇÃO DE ARQUIVO
+SD - DESCRIÇÃO DE 'SORT-FILES'
+RD - DESCRIÇÃO DE RELATÓRIOS
+CD - DESCRIÇÃO DE COMUNICAÇÃO
+
+FILE SECTION
+     FD <Nome_do_Arquivo>
+	LABEL RECORDS ARE STANDARD
+	RECORD CONTAINS <N> CHARACTERS
+	BLOCK CONTAINS <M> RECORDS
+	DATA RECORD IS <Nome_do_Arquivo>
+Exemplo:
+FD DEPARTAMENTO
+   LABELS RECORDS ARE STANDARD
+   RECORD CONTAINS 50 CHARACTERS
+   BLOCK CONTAISN 0 RECORDS
+   DATA RECORD IS REG-DEPARTAMENTO.
+01 REG-DEPARTAMENTO	PIC X(50).
+
+=====================================================================
+- Os números de níveis começam em 01 e vão até 49.
+
+-Existem 3 tipos de dados cujo números de nível não pertecem a uma estrutura de registro, que são, 66,77 e 88.
+=====================================================================
+FILE DESCRIPTION (FD)
+É a descrição do arquivo.
+(V-Formato do Arquivo “Variável”)
+(F-Formato do Arquivo “Fixo”)
+
+=====================================================================
+RECORDING MODE
+Designa o formato do registro.
+
+(RECORDING MODE IS X)
+
+    FIXO (F)
+    FIXO BLOCADO (FB)
+    VARIÁVEL (V)
+    VARIÁVEL BLOCADO (VB)
+    VARIÁVEL SPANNED (VS)
+    VARIÁVEL BLOCADO SPANNED (VBS)
+    UNDEFINED (U)
+
+Nota: Se não for colocada a cláusula “RECORDING MODE”, o compilador determinará pelo cartão “DD” ou catálogo.
+
+=====================================================================
+LABEL RECORD
+Especifica o formato do label.
+    STANDARD -> padrão
+    OMITTED -> omitido (impressora, leitora de cartões perfuradoras não possuem “LABELS”)
+
+Nota: Quando omitido assume “LABEL STANDARD”.
+
+LABEL RECORDS ARE STANDARD
+LABEL RECORDS ARE OMITTED
+
+=====================================================================
+RECORD CONTAINS
+Especifica o tamanho do registro lógico.
+
+RECORD CONTAINS <Inteiro> CHARACTERS
+
+Nota: Se esta cláusula for colocada, é feita uma conferência pelo compilador, somando a quantidade de bytes da definição do registro.
+
+=====================================================================BLOCK CONTAINS
+É usada para especificar o tamanho do registro físico.
+
+Notas: Se for colocado zero (0), assume informações do cartão “DD”; Se não for colocado “RECORDS”, assume “CHARACTERS”.
+
+BLOCK CONTAINS <Inteiro> <CHARACTERS / RECORDS>
+
+=====================================================================
+DATA RECORD
+É usada para identificar o layout do registro do arquivo para manipular os dados usando os campos no layout do registro.
+
+DATA RECORD IS <Arquivo>
+
+DATA RECORD ARE <Arquivo>, <Arquivo>,...
+
+Nota: Serve apenas como documentação, identificando os registros do arquivo pelo nome.
+
+=====================================================================

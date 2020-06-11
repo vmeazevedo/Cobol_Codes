@@ -1,0 +1,15 @@
+=====================================================================
+DATA DIVISION
+=====================================================================
+- Sessões
+  FILE SECTION
+  WORKING-STORAGE SECTION
+  LINKAGE SECTION
+  COMNUNICATION SECTION
+  REPORT SECTION
+
+- File Section: descreve o conteúdo e a organização dos arquivos.
+- Working-Storage Section: descreve informações sobre as áreas intermediárias de trabalho.
+- Linkage Section: é utilizada para ligar o programa principal em COBOL a outros programas.
+
+=====================================================================

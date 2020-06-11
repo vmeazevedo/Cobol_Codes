@@ -1,9 +1,9 @@
       *-----------------------------------------------------------------
        IDENTIFICATION DIVISION.
       *-----------------------------------------------------------------
-       PROGRAM-ID.     MODELO.
+       PROGRAM-ID.     01_ENVIRONMENT_DIVISION.
        AUTHOR.         VINICIUS AZEVEDO.
-       DATE-WRITTEN.   08/06/2020.
+       DATE-WRITTEN.   11/06/2020.
        DATE-COMPILED.
        SECURITY.       NAO E CONFIDENCIAL.
       ******************************************************************
@@ -22,28 +22,6 @@
 
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT ARQUIVO ASSIGN TO LOCAL.
+           SELECT ARQUIVO ASSIGN TO DISK.
+           SELECT ARQUIVO ASSIGN TO PRINTER.
        I-O-CONTROL.
-
-      *-----------------------------------------------------------------
-       DATA DIVISION.
-      *-----------------------------------------------------------------
-       FILE SECTION.
-       FD  ARQUIVO
-           LABEL RECORDS ARE STANDARD
-           RECORD CONTAINS 50 CHARACTERS
-           BLOCK CONTAINS 0 RECORDS
-           DATA RECORD IS REG-ARQUIVO.
-       01  REG-ARQUIVO      PIC X(50).
-
-
-       WORKING-STORAGE SECTION.
-
-      *-----------------------------------------------------------------
-       PROCEDURE DIVISION.
-      *-----------------------------------------------------------------
-       PROGRAM-BEGIN.
-
-
-       PROGRAM-DONE.
-           GOBACK.

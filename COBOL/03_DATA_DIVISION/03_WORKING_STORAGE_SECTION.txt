@@ -1,0 +1,16 @@
+=====================================================================
+WORKING-STORAGE SECTION
+=====================================================================
+- Usada para definir qualquer area de trabalho.
+- Primeiro se define aqui e depois se usam na lógica.
+- Se definem: Registros, Campos, Tabelas Internas, Titulos, Datas, etc.
+- Uso de vários níveis de campos (01,05,10,15,etc.)
+- Cláusula VALUE para inicializar
+- Uso do FILLER para áreas onde não importam o nome
+- Cláusula REDEFINES para subdividir campos
+
+
+WORKING-STORAGE SECTION
+01  WS-AREAS-A-USAR
+    05 WS-CONTADOR-LIDOS		PIC 9(05)	VALUE ZEROS.
+    05 SW-EOF				PIC X(01)	VALUE 'N'.

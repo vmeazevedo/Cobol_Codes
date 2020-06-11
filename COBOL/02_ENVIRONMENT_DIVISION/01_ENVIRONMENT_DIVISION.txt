@@ -1,0 +1,15 @@
+=====================================================================
+ENVIRONMENT DIVISION
+=====================================================================
+- Informação a respeito do Hardware e arquivos a utilizar.
+
+Composta de duas seções:
+- CONFIGURATION SECTION
+  SOURCE-COMPUTER
+  OBJECT-COMPUTE
+
+- INPUT-OUTPUT SECTION
+  FILE-CONTROL
+   - SELECT (Arquivo e qual o dispositivo)
+
+=====================================================================

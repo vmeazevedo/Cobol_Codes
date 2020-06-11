@@ -1,13 +1,13 @@
       *-----------------------------------------------------------------
        IDENTIFICATION DIVISION.
       *-----------------------------------------------------------------
-       PROGRAM-ID.     MODELO.
+       PROGRAM-ID.     07_GOTO_DEPENDING_ON.
        AUTHOR.         VINICIUS AZEVEDO.
-       DATE-WRITTEN.   08/06/2020.
+       DATE-WRITTEN.   10/06/2020.
        DATE-COMPILED.
        SECURITY.       NAO E CONFIDENCIAL.
       ******************************************************************
-      * TEXTO:
+      * TEXTO: Exemplificação do comando GO TO DEPENDING ON.
       *
       *
       *
@@ -18,32 +18,40 @@
        CONFIGURATION SECTION.
        SOURCE-COMPUTER.           IBM-3083.
        OBJECT-COMPUTER.           IBM-3083.
-       SPECIAL-NAMES.             DECIMAL-POINT IS COMMA.
 
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT ARQUIVO ASSIGN TO LOCAL.
-       I-O-CONTROL.
-
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
-       FILE SECTION.
-       FD  ARQUIVO
-           LABEL RECORDS ARE STANDARD
-           RECORD CONTAINS 50 CHARACTERS
-           BLOCK CONTAINS 0 RECORDS
-           DATA RECORD IS REG-ARQUIVO.
-       01  REG-ARQUIVO      PIC X(50).
-
-
        WORKING-STORAGE SECTION.
+       01  WS-AREAS-A-USAR.
+           05 WS-OPCAO-MENU            PIC 9(01).
+
 
       *-----------------------------------------------------------------
        PROCEDURE DIVISION.
       *-----------------------------------------------------------------
        PROGRAM-BEGIN.
 
+           DISPLAY 'DIGITE A OPCAO: '
+           ACCEPT WS-OPCAO-MENU
+           GO TO   010-ALTA
+                   020-BAIXA
+                   030-CAMBIO
+           DEPENDING ON WS-OPCAO-MENU
+           DISPLAY 'OPCAO INVALIDA'
+           GOBACK.
+
+           010-ALTA.
+               DISPLAY 'A OPCAO DO MENU E ALTA.'.
+               GOBACK.
+           020-BAIXA.
+               DISPLAY 'A OPCAO DO MENU E BAIXA.'.
+               GOBACK.
+           030-CAMBIO.
+               DISPLAY 'A OPCAO DO MENU E CAMBIO'.
+               GOBACK.
 
        PROGRAM-DONE.
            GOBACK.
