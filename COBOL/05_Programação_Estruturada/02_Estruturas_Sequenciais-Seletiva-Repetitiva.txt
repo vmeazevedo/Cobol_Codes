@@ -1,0 +1,82 @@
+=====================================================================
+Estrutura Sequêncial
+=====================================================================
+
+Inicializa campos	MOVE ZEROS TO WS-CALCULO
+Aceita valores		ACCEPT WS-IMPORTE
+			ACCEPT WS-IVA
+Realiza cálculos	COMPUTE WS-CALCULO = WS-IMPORTE * WS-IVA
+Apresenta resultados	DISPLAY 'O IVA E:' WS-IVA
+
+=====================================================================
+Estrutura Seletiva
+=====================================================================
+
+	 _______SALDO > LIMITE______
+       SIM			   NÃO 
+  	|                           |
+GERENCIAMENTO EXTERNO	   CÁLCULOS NORMAIS
+	|			    |		
+	|_____ IMPRIME REPORTE	___ | 	
+
+
+Codificação em COBOL:
+
+IF SALDO > LIMITE
+THEN
+   PERFORM 100-GERENCIAMENTO-EXTERNO THRU 100-FIM
+ELSE
+   PERFORM 200-CALCULOS-NORMAIS THRU 200-FIM
+END-IF
+PERFORM 300-IMPRIME-REPORTE THRU 300-FIM
+GOBACK.
+
+=====================================================================
+Estrutura Repetitiva
+=====================================================================
+
+	   LER EMPREGADOS
+ _______________>|
+|		 |
+|                |	    SIM
+|	      SW = "FIM" _________ SAÍDA
+|                |
+|                |
+|                | NÃO
+|                |
+|                |
+|         REALIZA CÁLCULO
+|                |
+|                |
+|<________LER EMPREGADOS      
+
+
+010-INICIO.
+    MOVE SPACES TO SW-FIN
+    PERFORM 100-LE-EMPREGADOS THRU 100-FIM
+    PERFORM 100-PROCESSO THRU 100-FIM UNTIL SW-FIM EQUAL "FIM"
+    DISPLAY "CALCULADO: ' WS-CALCULO
+    GOBACK.
+
+100-PROCESSO.
+    PERFORM 200-REALIZA-CALCULO THRU 200-FIM.
+100-LE-EMPREGADOS.
+    READ EMPREGADOS INTO WS-.......
+	 AT END MOVE "FIM' TO SW-FIM.
+100-FIM. FIM. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
