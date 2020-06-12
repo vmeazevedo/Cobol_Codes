@@ -1,0 +1,11 @@
+=====================================================================
+Programação Estruturada
+=====================================================================
+Vantagens: Se le em sequência e são fáceis de seguir, são de fácil mantenimento.
+
+Evita o uso de GO TO: Tantos saltos dificulta a lógica.
+
+Melhor refazer um programa que não está estruturado do que modificalo.
+
+3 Estruturas básicas: Sequêncial, Seletiva e Repetitiva.
+
