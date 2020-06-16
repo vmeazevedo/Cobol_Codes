@@ -1,0 +1,4 @@
+           SELECT STUDENT ASSIGN TO 'student.dat'
+           ORGANIZATION IS INDEXED
+           ACCESS MODE IS DYNAMIC
+           RECORD KEY IS STUDENT-ID.
