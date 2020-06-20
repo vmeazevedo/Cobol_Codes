@@ -1,0 +1,4 @@
+- Microcomputadores são pequenos computadores usados em casas e escritórios;
+- Minicomputadores são maiores que microcomputadores mas são menores que os Mainframes.
+- Mainframes são usados in casos onde se é requerido muitas operações de entrada e saida como transações ATM, cartão de crédito, etc.
+- Supercomputadores são extremamente grandes e realização muitas operações complexas.
