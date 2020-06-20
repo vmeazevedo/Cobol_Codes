@@ -1,0 +1,22 @@
+======================================================================
+START	open a new screen
+F3	go back
+F7	go  one step up
+M + F7	go to top 
+F8	go one step down
+M + F8	go to bottom
+V	to view a dataset
+B	to browse a dataset
+E	to edit a dataset
+S	to select a dataset
+======================================================================
+PESQUISANDO POR UM ARQUIVO
+- Option 3 = Utilities
+- Option 4 = DSLIST
+- Data set name = MATEKS
+or
+- Data set name = MATEKS.*
+Irá lista todos os arquivos que tenham esse nome.
+
+
+
