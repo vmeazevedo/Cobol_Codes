@@ -1,0 +1,137 @@
+======================================================================
+DETALHES SOBRE PS E PDS
+======================================================================
+
+PS - Physical sequential
+PDS - Partitioned Data Set
+
+*** PS is similar to a file
+*** PDS is similar to a folder
+
+======================================================================
+SPACE UNITS
+
+BLKS
+TRKS
+CYLS
+KB
+MB
+BYTES
+
+1 track ~192KB or 48KB or 56KB - also depends on which type of DASD you use
+1 Cylinder = 15 Tracks
+1 track has minimum 6 block.
+
+- A sequential data set can have 16 extents on each volume
+- A PDS can have 16 extents.
+- A PDSE can have 123 extents.
+
+======================================================================
+UNITS OF SPACES ALLOCATED
+
+Primary Quantity - Must be non zero for PDS
+Secondary Quantity - Provided when primary allocation is done.
+
+Total extends = 16 per volume
+Total units(trks/blks/cyl) = Primary + 15 * Secondary.
+
+Thus as per this formula
+
+Example if you have
+SPACE = (TRK,(10,5)) = (1*10) + (15*5)
+It will occupy 85 tracks maximum.
+
+======================================================================
+DIRECTORY BLOCKS
+
+Data sets with ISPF statistics = 6
+Data sets without ISPF statistics = 21
+
+======================================================================
+RECORD FORMAT
+
+F - Fixed-length records
+FB- Fixed Blocks
+V - Variable-length records
+VB - Variable-length block
+U - Undefined format records
+
+======================================================================
+RECORD LENGTH
+
+The logical record length, in bytes, of the records to be stored in the data set.
+
+======================================================================
+BLOCK SIZE
+
+The block size, also called physical record length, of the blocks to be stored in the data set. Use this field to specify how many bytes of data to put into each block, based on the record length.
+
+For example, if the record length is 80 and the block size is 3120, 39 records can be places in each block.
+
+======================================================================
+IMPORTANT DATA SET NAME TYPE
+
+LIBRARY
+Allocates a partitioned data set extended. (pdse)
+
+PDS
+Allocates a partitioned data set.
+
+LARGE
+Allocates a large format sequential data set
+
+blank
+Allocates a partitioned or sequential data set baesed on the data set characteristics entered.
+
+======================================================================
+Criando um arquivo PS e PDS
+======================================================================
+PS FILE:
+- Option 3 = Utilities
+- Option 2 = DataSet
+- Selecionamos A - ALLOCATE NEW DATA SET
+- DATA SET NAME = 'MATEKS.TEST.PS
+- Press ENTER
+- ALLOCATION SPACE UNIT = T
+- PRIMARY SPACE QUANTITY = 10
+- SECONDARY SPACE QUANTITY = 5
+- DIRECTORY BLOCKS = 0
+- RECORD FORMAT = FB
+- RECORD LENGTH = 80
+- BLOCK SIZE = 800
+- Press ENTER
+
+PDS FILE:
+- Option 3 = Utilities
+- Option 2 = DataSet
+- Selecionamos A - ALLOCATE NEW DATA SET
+- DATA SET NAME = 'MATEKS.TEST.PS
+- Press ENTER
+- ALLOCATION SPACE UNIT = C
+- PRIMARY SPACE QUANTITY = 10
+- SECONDARY SPACE QUANTITY = 5
+- DIRECTORY BLOCKS = 0
+- RECORD FORMAT = FB
+- RECORD LENGTH = 80
+- BLOCK SIZE = 800
+- Press ENTER
+
+======================================================================
+Verificando um arquivo criado
+======================================================================
+Retorne ao menu inicial.
+- Option 3 = Utilities
+- Option 4 = DSLIST
+- DATA SET NAME = MATEKS.TEST.PS
+- Press ENTER
+- Enter 'i' or 's' to get information of the file
+
+
+
+
+
+
+
+
+
+

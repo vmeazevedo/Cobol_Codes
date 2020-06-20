@@ -1,0 +1,11 @@
+cobol - it is earliest high-level programming language started in 1960's
+
+Assembly language - Assembler is a computer program which translates assembly language to
+object file or machine language format.
+it is easy for machine code to understand the assembly language. 
+
+PL/I - Procedural imperative language is a third-generation programming language designed for scientific, engineering, business and system programming uses.
+
+CLIST - it will only run from within TSO/Extended
+
+Rexx- can be run from within TSO/E as well as from other environments as well.Rexx can also run on various platforms

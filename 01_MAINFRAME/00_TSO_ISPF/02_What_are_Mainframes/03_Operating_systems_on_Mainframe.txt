@@ -1,0 +1,19 @@
+Mainframe operating system: z/OS
+
+64 bit operating system from IBM Mainframes.
+z/OS, a modern and widely used mainframe operating system. It is a stable, secure, and continuously available system for applications running on the mainframe.
+
+
+Mainframe operating system: z/VM
+As a control program, z/Virtual Machine (z/VM) is a hypervisor because it runs other operating systems in the virtual machines it creates.
+
+
+Mainframe operating system: z/VSE
+z/Virtual Storage Extended (z/VSE) is popular with users who requires low configuration and smaller mainframe computers. Some of these customers eventually migrate to z/OS when they grow beyond 
+the capabilities of z/VSE.
+
+Mainframe operating system: Linux for System z
+This is Mainframe operating system for linux and used to run several (non-IBM) Linux distributions that can be used on a mainframe.
+
+Mainframe operating system: z/TPF
+The z/Transaction Processing Facility (z/TPF) operating system is a special-purpose system that is used by companies with very high transaction volume, such as credit card companies and airline reservation systems.
