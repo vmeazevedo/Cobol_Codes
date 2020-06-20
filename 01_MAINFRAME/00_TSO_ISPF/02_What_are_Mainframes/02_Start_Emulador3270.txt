@@ -1,0 +1,40 @@
+Abrindo o Emulador 3270
+
+- Inicie o MVS no cmd:
+C:\MVS-IBM\MVS-TK4   	(pressione ENTER)
+MVS			(pressione ENTER)
+
+- Licença para registrar o TN3270:
+Alejandro Ponce
+EJHF7LDLD6
+
+- Apos isso inicie o terminal TN3270 e configure a sessão assim:
+Session File = standard.ses
+Host IP = localhost
+IP Port = 3270
+Terminal Model = Mod4
+
+- Clicar em Connect
+
+- Ir em Options -> Keyboard Editor 
+Verificar se o Enter está como "Normal' Enter
+Verificar se o End está como "Normal' End
+
+- Login: herc01
+- Senha: cul8tr
+Pressionar enter duas vezes.
+
+-Para navegar no menu, digite o numero que você quer de seleção
+F3 - Volta para o menu anterior
+
+- Para sair do sistema basta estar na tela principal e pressionar F3
+Caso você queira retornar ao sistema digite:
+logon
+Após isso o seu login
+Após isso a sua senha
+Pressione enter duas vezes.
+
+Para sair do emulador finalizando todos os processos:
+F3 - Volta para o menu anterior
+shutdown - Para todos os processos
+logoff
