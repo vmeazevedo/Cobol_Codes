@@ -1,0 +1,18 @@
+======================================================================
+INPUT PROCEDURE / GIVING
+======================================================================
+
+010-CLASSIFICA.
+	SORT ARQUIVO-SORT ON ASCENDING KEY
+		SORT-DEPTO-EMP
+		SORT-NUM-EMP
+	INPUT PROCEDURE 020-ORDENA THRU 020-FIM
+	GIVING EMPREGADOS-ORDENADO
+	  . . . . .
+
+
+- Sera realizado um sort do arquivo EMPREGADOS de forma ascendente
+- Utilizando os parametros setados no SD
+- Realizando primeiro por departamento seguido do numero
+- Que invoque a rotina 020-ORDENA THRU 020-FIN
+- E armazenando o resultado no arquivo EMPREGADOS-ORDENADO.

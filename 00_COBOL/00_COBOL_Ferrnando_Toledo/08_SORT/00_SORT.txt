@@ -1,0 +1,33 @@
+======================================================================
+SORT
+======================================================================
+Normalmente a classificação é com utilitários:
+
+		    CAMPO E ORDEM
+			  V
+SEM ORDENAR	>	SORT	  >	ORDENADO
+
+COBOL pode ser usado para solicitar arquivos.
+A ordem dos registros pode ser por um ou vários campos.
+A ordem pode ser ascendete ou descendente ou mesclada.
+
+======================================================================
+Exemplo:
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL. 
+	SELECT ARQUIVO-SORT ASSIGN 'arquivo'.
+
+DATA DIVISION.
+FILE SECTION.
+SD  ARQUIVO-SORT.
+01  REG-SORT.
+    05 SORT-NUM-EMP		PIC 9(05).
+    05 SORT-NOM-EMP		PIC X(30).
+    05 SORT-STATUS-EMP		PIC 9(01).
+    05 SORT-DEPTO-EMP		PIC 9(03).
+    05 SORT-POSTO-EMP		PIC 9(02).
+    05 SORT-SALARIO-EMP		PIC 9(07)V99.
+
+======================================================================

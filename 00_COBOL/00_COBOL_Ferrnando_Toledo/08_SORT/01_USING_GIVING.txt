@@ -1,0 +1,19 @@
+======================================================================
+USING / GIVING
+======================================================================
+
+010-CLASSIFICA.
+	SORT ARQUIVO-SORT ON ASCENDING KEY
+		SORT-DEPTO-EMP
+		SORT-NUM-EMP
+	USING EMPREGADOS
+	GIVING ARQUIVO-PASSOU
+
+	OPEN INPUT ARQUIVO-PASSOU
+	........
+
+- Sera realizado um sort do arquivo EMPREGADOS de forma ascendente
+- Utilizando os parametros setados no SD
+- Realizando primeiro por departamento seguido do numero
+- Utilizando o arquivo EMPREGADOS
+- E armazenando o resultado no arquivo ARQUIVO-PASSOU

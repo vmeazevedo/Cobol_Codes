@@ -1,0 +1,21 @@
+======================================================================
+USING / OUTPUT PROCEDURE
+======================================================================
+
+010-CLASSIFICA.
+	SORT ARQUIVO-SORT ON ASCENDING KEY
+		SORT-DEPTO-EMP
+		SORT-NUM-EMP
+	USING EMPREGADOS 
+	OUTPUT PROCEDURE 030-PROCESSA-EMPREGADOS THRU 030-FIM
+	  . . . . .
+
+
+- Sera realizado um sort do arquivo EMPREGADOS de forma ascendente
+- Utilizando os parametros setados no SD
+- Realizando primeiro por departamento seguido do numero
+- Utilizando o arquivo EMPREGADOS
+- Invoque a rotina 030-PROCESSA-EMPREGADOS THRU 030-FIN
+
+
+
