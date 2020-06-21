@@ -1,0 +1,48 @@
+======================================================================
+OPTION 3.1 - UTILITIES - DATASET
+======================================================================
+- Selecionando a opção 3.2 podemos alocar, renomear, deletar, catalogar, uncatalogar ou apresentar informações de um data set inteiro.
+
+A - Allocate new data set
+Aloca um novo data set.
+Ex:
+Option/COMMAND ===> A
+DATA SET NAME ===> 'MATEKS.TEST.PDS
+Press ENTER
+ALLOCATION SPACE UNIT = C
+PRIMARY SPACE QUANTITY = 10
+SECONDARY SPACE QUANTITY = 5
+DIRECTORY BLOCKS = 0
+RECORD FORMAT = FB
+RECORD LENGTH = 80
+BLOCK SIZE = 800
+Press ENTER
+
+R - Rename entire data set
+Renomei o nome de um DATA SET.
+Ex:
+Option/COMMAND ===> R
+DATA SET NAME ===> 'MATEKS.TEST.PPS'
+NAME . . . . 'MATEKS.TEST.PDS'
+
+C - Catalog data set
+Se um data set nao esta catalogado ainda
+Ex:
+Option/COMMAND ===> C
+DATA SET NAME ===> 'MATEKS.TEST.PPS'
+Volume Serial ===> DEVSYS
+*Verificar a informação do volume em 3.4
+
+U - Uncatalog data set
+Remove o catalog de um data set catalogado
+Ex:
+Option/COMMAND ===> U
+DATA SET NAME ===> 'MATEKS.TEST.PPS'
+
+S - Short data set information
+Apresenta algumas informações do data set
+Ex:
+Option/COMMAND ===> S
+DATA SET NAME ===> 'MATEKS.TEST.PPS'
+
+======================================================================
