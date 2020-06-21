@@ -35,6 +35,8 @@ Ex:
 COMMAND ===> sort size
 Press ENTER
 
+Outro modo é você colocar o cursos do mouse em cima do unidade que quer realizar o sort e depois pressionar ENTER.
+
 ======================================================================
 COMANDO - s
 ======================================================================
