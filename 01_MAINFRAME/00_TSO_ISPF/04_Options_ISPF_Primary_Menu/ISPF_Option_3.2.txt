@@ -1,5 +1,5 @@
 ======================================================================
-OPTION 3.1 - UTILITIES - DATASET
+OPTION 3.2 - UTILITIES - DATASET
 ======================================================================
 - Selecionando a opção 3.2 podemos alocar, renomear, deletar, catalogar, uncatalogar ou apresentar informações de um data set inteiro.
 
