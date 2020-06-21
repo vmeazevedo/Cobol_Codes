@@ -1,0 +1,43 @@
+======================================================================
+OPTION 3.4 - UTILITIES - DSLIST
+======================================================================
+- Selecionando a opção 3.3 podemos processar data sets de um catalogo ou uma list VTOC.
+
+blank - Display data set list
+Apresenta uma lista de data set.
+
+Ex:
+Option/COMMAND ===>
+DATA SET NAME ===> MATEKS.*
+Press ENTER
+
+- Data set list options
+Initial view
+1. Volume: Selecionando a opção um será apresentado o volume de cada PDS.
+2. Space: Selecionando a opção dois será apresentados os tracks e a porcentagem de volume usado.
+3. Attrib: Selecionando a opção três será apresentado as propriedades do data list particular. (DSorganization, Record format, length record, block size, etc.).
+4. Total: Selecionando a opção quatro será apresentado a informação completa.
+
+
+P - Print data set list
+Ex:
+Option/COMMAND ===> P
+DATA SET NAME ===> MATEKS.*
+Press ENTER
+
+V - Display VTOC information
+VTOC - Indice de volume é usado para apresentar informações de volume, unidades, espaço livre e assim por diante.
+Ex:
+Option/COMMAND ===> V
+DATA SET NAME ===> MATEKS.*
+Volume Serial ===> DEVSYC
+Press ENTER
+
+PV - Print VTOC information
+Ex:
+Option/COMMAND ===> PV
+DATA SET NAME ===> MATEKS.*
+Volume Serial ===> DEVSYC
+Press ENTER
+
+======================================================================
