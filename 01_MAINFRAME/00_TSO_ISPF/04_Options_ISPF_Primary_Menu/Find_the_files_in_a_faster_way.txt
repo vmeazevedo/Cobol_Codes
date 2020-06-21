@@ -1,0 +1,54 @@
+======================================================================
+COMANDO - epdf
+======================================================================
+-EDIT:
+No menu ISPF Primary Option Menu, digite:
+epdf 'NOMEDO ARQUIVO'
+Ex:
+COMMAND ===> epdf 'MATEKS.TSOISPF.FILE1'
+Press ENTER
+
+O arquivo será aberto em EDIT MODE de forma rápida. 
+
+-VIEW:
+No menu ISPF Primary Option Menu, digite:
+Ex:
+COMMAND ===> epdf 'MATEKS.TSOISPF.FILE1' view
+Press ENTER
+
+O arquivo será aberto em VIEW MODE de forma rápida. 
+
+-BROWSE:
+No menu ISPF Primary Option Menu, digite:
+Ex:
+COMMAND ===> epdf 'MATEKS.TSOISPF.FILE1' browse
+Press ENTER
+
+O arquivo será aberto em BROWSE MODE de forma rápida. 
+
+======================================================================
+COMANDO - sort
+======================================================================
+Organizando os arquivos dentro de um PDS por tamanho.
+
+Ex:
+COMMAND ===> sort size
+Press ENTER
+
+======================================================================
+COMANDO - s
+======================================================================
+Procurando por um arquivo dentro de um PDS, sabendo uma parte de seu nome. O arquivo chama EDITPICC, e iremos procurar por ITP:
+
+Ex:
+COMMAND ===> s *ITP*
+Press ENTER
+O arquivo será localizado e aberto em VIEW MODE.
+
+Se executarmos o comando:
+Ex:
+COMMAND ===> s *ITP* e
+Press ENTER
+O arquivo será localizado e aberto em EDIT MODE.
+
+======================================================================
