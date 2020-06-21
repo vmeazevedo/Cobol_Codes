@@ -2,7 +2,7 @@
 
 Olá, meu nome é Vinícius Azevedo. Moro atualmente em São Paulo, Brasil.
 
-Este repositório tem como objetivo armazenar alguns códigos aleatórios que estou desenvolvendo durante o meu aprendizado da linguagem Cobol.
+Este repositório tem como objetivo armazenar alguns códigos aleatórios que estou desenvolvendo durante o meu aprendizado de mainframe.
 Sinta-se livre para usar meus códigos são todos open-source, caso você possa contribuir com eles também realizando alguma melhoria seria de grande valor! 
 
 Você pode entrar em contato comigo pelos canais abaixo:
@@ -15,7 +15,7 @@ Você pode entrar em contato comigo pelos canais abaixo:
 
 Hello, my name is Vinícius Azevedo. I currently live in São Paulo, Brazil.
 
-This repository aims to store some random codes that I am developing during my learning of the Cobol language.
+This repository aims to store some random codes that I am developing during my learning of mainframe.
 Feel free to use my codes are all open-source, if you can contribute with them also making some improvement would be of great value!
 
 You can contact me through the channels below:
