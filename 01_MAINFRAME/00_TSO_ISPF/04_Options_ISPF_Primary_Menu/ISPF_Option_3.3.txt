@@ -1,0 +1,59 @@
+======================================================================
+OPTION 3.1 - UTILITIES - MOVE/COPY
+======================================================================
+- Selecionando a opção 3.3 podemos mover ou copiar membros ou data sets.
+
+C - Copy data set or member(s)
+Copia um data set inteiro ou membros de um data set.
+
+Ex1:
+Option/COMMAND ===> C
+FROM OTHER DATA SET:
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB'
+Press ENTER
+FROM: 'MATEKS.CICS.SRCLIB'
+TO OTHER DATA SET:
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+Com o comando S selecione todos os arquivos a serem copiados.
+Press ENTER
+
+Ex2:
+Option/COMMAND ===> C
+FROM ISPF LIBRARY
+PROJECT . . . MATEKS
+GROUP . . . CICS
+TYPE . . . SRCLIB
+MEMBER . . . 
+Press ENTER
+FROM: 'MATEKS.CICS.SRCLIB'
+TO ISPF LIBRARY:
+PROJECT . . . MATEKS
+GROUP . . . CICS
+TYPE . . . SRCLIB
+MEMBER . . . 
+Com o comando S selecione todos os arquivos a serem copiados.
+Press ENTER
+
+Ex3:
+Abra o diretório do PDS a ser copiado em 3.4
+Entre com o comando C em todos os arquivos a serem copiados
+Press ENTER
+To Other Data Set Name
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+
+
+M - Move data set or member(s)
+Move um data set inteiro ou membros de um data set
+
+Ex1:
+Option/COMMAND ===> M
+FROM OTHER DATA SET:
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB'
+Press ENTER
+FROM: 'MATEKS.CICS.SRCLIB'
+TO OTHER DATA SET:
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+Com o comando S selecione todos os arquivos a serem movidos.
+Press ENTER
+
+======================================================================
