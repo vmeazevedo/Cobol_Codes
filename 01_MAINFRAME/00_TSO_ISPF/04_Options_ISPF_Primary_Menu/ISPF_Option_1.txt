@@ -1,0 +1,11 @@
+======================================================================
+OPTION 1 - BROWSE/VIEW
+======================================================================
+- Selecionando a opção 1 podemos visualizar o conteúdo de um arquivo
+- Inserimos o nome do arquivo em DATA SET NAME conforme salvamos e será possível visualizar o conteúdo do arquivo.
+
+Exemplo:
+- Select 1 BROWSE/VIEW
+- DATA SET NAME ===> 'MATEKS.TEST.PS'
+- Conteúdo é apresentado.
+======================================================================

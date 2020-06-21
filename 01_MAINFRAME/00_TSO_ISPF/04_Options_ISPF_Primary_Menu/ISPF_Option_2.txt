@@ -1,0 +1,19 @@
+======================================================================
+OPTION 2 - EDIT
+======================================================================
+- Selecionando a opção 2 podemos editar o conteúdo de um arquivo
+- Inserimos o nome do arquivo em DATA SET NAME conforme salvamos e será possível editar o conteúdo do arquivo.
+
+Exemplo:
+- Select 2 EDIT
+- DATA SET NAME ===> 'MATEKS.TEST.PS'
+- Nos é apresentado o arquivo em EDIT MODE.
+
+ COMMAND ===>                                                    
+ ****** ***********AUTOSAVE********** TOP OF DATA ********************
+ 000001 TESTE                                                                   
+ 000002 HI THIS IS A LINE FROM OPTION 2                                         
+ ****** ***********AUTOSAVE********* BOTTOM OF DATA ******************
+
+- Após editar, enviar o comando SAVE na command line para armazenar as alterações.
+======================================================================
