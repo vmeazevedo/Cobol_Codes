@@ -1,0 +1,31 @@
+======================================================================
+OPTION 3.5 - UTILITIES - RESET /SPFSTATS
+======================================================================
+- Selecionando a opção 3.5 podemos resetar ou apagar os valores de estatisticas ISPF.
+
+R - Reset ISPF statistics.
+Reseta os valores.
+
+Ex:
+Option/COMMAND ===> R
+DATA SET NAME ===> MATEKS.CICS.SRCLIB.COPY'
+Press ENTER
+Selecionamos o arquivo a ser resetado com o comando S.
+Press ENTER
+Retornamos ao PDS e damos uma refresh para atualizar com o comando REF
+As estatisticas do arquivo foram resetadas para a data atual.
+
+
+D - Delete ISPF statistics.
+Reseta os valores.
+
+Ex:
+Option/COMMAND ===> D
+DATA SET NAME ===> MATEKS.CICS.SRCLIB.COPY'
+Press ENTER
+Selecionamos o arquivo a ser deletada a estatistica com o comando S.
+Press ENTER
+Retornamos ao PDS e damos uma refresh para atualizar com o comando REF
+As estatisticas do arquivo foram deletadas.
+
+======================================================================
