@@ -1,0 +1,62 @@
+======================================================================
+OPTION 3.1 - UTILITIES - LIBRARY
+======================================================================
+- Selecionando a opção 3.1 podemos apresentar um lista de membros, comprimir uma biblioteca, e utilizar as opções de browse, delete e rename.
+
+I - Data set information
+Apresenta as informações completas do DATA SET.
+Ex:
+Option/COMMAND ===> I
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+
+B - Browse member
+Em browse member se faz necessário colocar o member desse PDS conforme o exemplo.
+Ex:
+Option/COMMAND ===> B
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY(C3)'
+
+C - Compress library
+Utilizado quando você esta tentando editar um arquivo e derrepente uma mensagem de erro é apresentada dizendo que o espaço dentro do arquivo está cheio e que você nao conseguira editar ou salvar ele futuramente.
+Ex:
+Option/COMMAND ===> C
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+
+S - Short data set information
+Apresenta algumas informações sobre o DATA SET.
+Ex:
+Option/COMMAND ===> S
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY'
+
+D - Delete member
+Deleta o membro de um PDS.
+Ex:
+Option/COMMAND ===> D
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB.COPY(C3)'
+Press ENTER to confirm delete.
+Press CANCEL or EXIT to cancel delete.
+
+E - Edit member
+Acessa um membro e habilita o modo de edição.
+Ex:
+Option/COMMAND ===> E
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB(C)'
+
+R - Rename member
+Realização o rename de um arquivo.
+Ex:
+Option/COMMAND ===> R
+NEW NAME ===> D
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB(C)'
+Acesse o PDS novamente sem nenhum comando
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB(D)'
+Option/COMMAND ===> REF
+Será apresentado o arquivo renomeado
+
+V - View member
+Abra em modo de visualização um membro.
+Ex:
+Option/COMMAND ===> V
+DATA SET NAME ===> 'MATEKS.CICS.SRCLIB(D)'
+
+
+======================================================================
