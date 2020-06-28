@@ -1,0 +1,77 @@
+======================================================================
+OPTION 15 - DB2 V10       ======================================================================
+- Selecionando a opção 15 podemos acessar as funções DB2, vamos analisar a opção 1 SPUFI.
+
+***Antes de tudo devemos criar os DS de entrada(MATEKS.SPUFI) e de saida(MATEKS.SPUFI.OUT) vazios, posterior a isso siga os comandos abaixo.
+
+- DB2 V10 
+Ex:
+COMMAND ===> 1 (SPUFI - Process SQL statements)
+Press ENTER
+Enter the input data set name:
+1   DATA SET NAME . . . ===> 'MATEKS.SPUFI'
+Enter the output data set name:
+4   DATA SET NAME . . . ===> 'MATEKS.SPUFI.OUT'
+Specify processing options:
+5   CHANGE DEFAULTS     ===> NO
+6   EDIT INPUT . . . .  ===> YES
+7   EXECUTE . . . . . . ===> YES
+8   AUTOCOMMIT . . . .  ===> YES
+9   BROWSE OUTPUT . . . ===> YES
+
+Com a opção 3.4 acessamos o DS 'MATEKS.SPUFI'
+Dentro do DS vamos inserir os dados:
+***Temos que informar o nome da database DB2, e o nome da table space, onde queremos criar a table.***
+DB2 DATABASE NAME = DBMATE1
+TABLE SPACE NAME = TSMATEKS
+
+CREATE TABLE EMP1(EMPID INT, NAME CHAR(20)) IN DBMATE1.TSMATEKS;
+Command ===> SAVE
+F3
+Press ENTER
+Será apresentado: STATEMENT EXECUTION WAS SUCCESFULL, SQLCODE IS 0
+Assim criamos nossa tabela.
+
+
+***********************************************************************
+- INSERINDO VALORES NA TABELA
+Retorne para o menu do SPUFI 
+Press ENTER para acessar o DS
+Inclua '--' na linha do CREATE para comentar ela
+Adicione uma linha no arquivo com o comando I
+Digite:
+INSERT INTO EMP1 VALUES(100, 'VINICIUS');
+INSERT INTO EMP1 VALUES(100, 'SAM');
+Command ===> SAVE
+F3
+Press ENTER 
+Será apresentado para cada valor inserido: STATEMENT EXECUTION WAS SUCCESFULL, SQLCODE IS 0
+
+***********************************************************************
+- CONSULTANDO A TABELA
+Retorne para o menu do SPUFI
+Press ENTER para acessar o DS
+Inclua '--' nas novas linhas para comentar elas
+Adicione uma linha no arquivo com o comando I
+Digite:
+SELECT * FROM EMP1;
+Command ===> SAVE
+F3
+Press ENTER
+Será apresentado a tabela criada com todos os dados inseridos.
+
+
+***********************************************************************
+ Steps to run a cobol-db2 program
+==============================
+	1. Create the table
+	2 Insert the record in the table
+	3.Create the DCLgen (Declarations Generator ) 
+	4. Precompile 
+	5. Bind 
+	 - Binding A DBRM To A Package 
+	 - Binding An Application Plan 
+	6. Compile And Link edit 
+	7. Run the JCL to execute the cobol-db2 program
+
+======================================================================
