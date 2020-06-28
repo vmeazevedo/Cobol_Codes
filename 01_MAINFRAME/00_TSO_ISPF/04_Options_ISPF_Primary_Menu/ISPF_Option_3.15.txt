@@ -1,0 +1,16 @@
+======================================================================
+OPTION 3.15 - UTILITIES - SEARCH-FORE       ======================================================================
+- Selecionando a opção 3.15 podemos procurar datas de string extendidas em um data set.
+
+- Search-ForE
+Ex:
+Search DS Name ===> 'MATEKS.TEST.PS1'
+Enter Search String and Optional operands (word/prefix/suffix,c)
+***Se formos buscar uma combinação de palavras usamos aspas simples, se não é so colocar a palavra sozinha.***
+Caps . . 'HI THIS'
+Caps . . 'PPENDEDE IS'
+Listing DSN . . . SCHFOR.LIST
+Press ENTER
+Será apresentado todos os HI encontrados no arquivo.
+
+======================================================================
