@@ -1,0 +1,32 @@
+======================================================================
+OPTION 4 - FOREGROUND       ======================================================================
+- Selecionando a opção 4 podemos executa o processo no terminal travado até que o processo esteja completo.
+
+- Foreground
+Ex:
+Option ===> 2 (COBOL)
+Press ENTER
+Será aberto a pagina Foreground Cobol Compile
+Em Other Partitioned or Sequential Data Set, informamos o arquivo que queremos compilar.
+Name . . . . . . 'MATEKS.COBOL.SRCLIB'
+Será apresentado a aba para selecionarmos o arquivo, selecione ele com o S.
+Press ENTER.
+Será apresentado a mensagem: 
+COBOL STARTED LOCATION4
+***
+Indo ao final da pagina podemos ver o Returno Code, se ele for 0 compilamos o arquivo com sucesso.
+
+Quando retornamos do menu é nos apresentado algumas opções:
+PK Print data set and keep
+PD Print data set and delete
+K  Keep data set (without printing)
+D  Delete data set ( without printing)
+
+Option ===> K
+Data set name . : 'MATEKS.COB001.LIST
+Press ENTER
+
+Se formos na opção 3.4 poderemos ver o conteúdo do processo dentro desse arquivo.
+
+
+======================================================================
