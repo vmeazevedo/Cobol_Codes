@@ -1,0 +1,59 @@
+======================================================================
+ISPF Command Shell
+======================================================================
+Selecionando a opção 6 podemos entrar com comando TSO ou comandos Workstation.
+
+=======================================================================
+- Comando - ALLOCATE
+Aloca um dataset dinamicamente.
+Alocando um PS:
+Option ===> 6 (Command)
+ALLOCATE DA(ALLOC.FILE2) DSORG(PS) SPACE(2,0) TRACKS LRECL(80) BLKSIZE(800) RECFM(F,B) NEW
+Press ENTER
+
+Alocando um PDS:
+Option ===> 6 (Command)
+ALLOCATE DATASET(ALLOC.FILE1) NEW DIR(4) TRACKS SPACE(2,3) DSORG(PO) LRECL(80) BLKSIZE(800) CATALOG 
+Press ENTER
+
+=======================================================================
+- Comando - CREATE .ZF .ZL
+Copia todo o DS em outro dataset.
+Abra um data set que queira utilizar como base em edit mode.
+Ex:
+E	MATEKS.TEST.PS1
+Command ===> CREATE .ZF .ZL
+Press ENTER
+Em 'To Other Sequential Data Set, ...' informe o nome do novo DS
+Name . . . . 'MATEKS.TEST.PS4'
+Press ENTER
+Em 'Allocation Options', digite 1
+1. Allocate using the attribute of: MATEKS.TEST.PS1
+Press ENTER
+Será criado um arquivo MATEKS.TEST.PS4 com todo o conteudo do MATEKS.TEST.PS1
+
+=======================================================================
+- Comando - CUT A / PASTE A
+Copia o conteudo de um DS e cola o conteudo em outro DS.
+Abra um data set que queira utilizar como base em edit mode.
+Ex:
+E	MATEKS.TEST.PS1
+Command ===> CUT A
+Press ENTER
+Abra o DS em que você queira colar o conteudo copiado
+E	MATEKS.TEST.PS4
+Command ===> PASTE A
+*A***  ************************* Top of Data *************************
+*****  *********************** Bottom of Data *************************
+Press ENTER
+Todo o conteudo copiado será colado no DS.
+
+=======================================================================
+- Comando - DELETE
+Deleta um DS.
+Option ===> 6 (Command)
+===> TSO DELETE 'MATEKS.TEST.PS4'
+Press ENTER
+
+
+==============================================================================================================================================
