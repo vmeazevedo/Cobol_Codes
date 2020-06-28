@@ -1,0 +1,32 @@
+======================================================================
+OPTION 3.12/3.13 - UTILITIES - SUPERC / SUPERCE        ======================================================================
+- Selecionando a opção 3.12 podemos comparar datasets.
+
+- SuperC
+Compara os data sets
+Ex:
+DATA SET NAME ===> MATEKS.TEST.PS1'
+Press ENTER
+Indicamos o arquivo a ser comparado:
+"Old" other Patitioned, Sequential or VSAM Data Set
+DATA SET NAME ===> MATEKS.TEST.PS2'
+Press ENTER
+Será apresentado as informações.
+
+- SuperCE
+Compara os data sets extendidos
+Ex:
+New DS NAME ===> MATEKS.TEST.PS1'
+Old DS NAME ===> MATEKS.TEST.PS1'
+Podemos selecionar o PDS Member list, analisar as opções disponíveis.
+Press ENTER
+Será apresentado as informações.
+
+***********************************************************************
+In SuperCE you have lot of compare types -
+1. File - To compare the source data sets on File basis to determine if there is any difference.
+2. Line - To compare the source data set with destination data set  at the line level.
+3. Word - To compare the source data set with destination data set for each word.
+4. Byte - To compare the source data sets with destination data set for any differences at the byte level.
+***********************************************************************
+======================================================================
