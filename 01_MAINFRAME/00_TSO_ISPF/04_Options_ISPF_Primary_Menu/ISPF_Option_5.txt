@@ -1,0 +1,36 @@
+======================================================================
+OPTION 5 - BATCH       ======================================================================
+- Selecionando a opção 5 podemos submeter jobs para processamento de linguagem.
+
+- Batch
+Ex:
+Option ===> 2 (COBOL)
+Press ENTER
+Será aberto a pagina Batch Cobol Compile
+Em Other Partitioned or Sequential Data Set, informamos o arquivo que queremos compilar.
+Name . . . . . . 'MATEKS.COBOL.SRCLIB'
+Será apresentado a aba para selecionarmos o arquivo, selecione ele com o S.
+Press ENTER.
+Em Batch Selection Panel, informaremos a opção END para processar o job
+Option ===> END
+Sera perguntado se queremos dar algum nome
+IKJ56700A ENTER JOBNAME CHARACTER(S) - 
+AB	(Nome utilizado)
+Press ENTER
+IKJ56250I JOB MATEKSAB(JOB06952) SUBMITTED
+***
+Press ENTER
+
+Retorne para o ISPF Primary Option Menu
+Option ===> S
+Para ver o status do job informamos ST
+COMMAND INPUT ===> ST
+Press ENTER     
+Localize o arquivo criado e na coluna NP digite ?
+Press ENTER
+Selecione a output (SYSPRINT) com o S
+Vá até o final do arquivo e confirme o Return Code se é igual a 0.
+
+Retornando para o menu anterio se digitarmos SJ no DDNAME SYSPRINT, iremos ver o job criado por esse processo BATCH.
+  
+======================================================================
