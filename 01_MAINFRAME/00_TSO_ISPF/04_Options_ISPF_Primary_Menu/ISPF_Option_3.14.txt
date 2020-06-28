@@ -1,0 +1,14 @@
+======================================================================
+OPTION 3.14 - UTILITIES - SEARCH-FOR       ======================================================================
+- Selecionando a opção 3.14 podemos procurar datas de string em um data set.
+
+- Search-For
+Ex:
+Search String ===> HI
+Indicamos onde vamos procurar, ISPF Library ou Other Partitioned, S..
+DATA SET NAME ===> MATEKS.TEST.PS1'
+Listing Data Set . . . SCHFOR.LIST
+Press ENTER
+Será apresentado todos os HI encontrados no arquivo.
+
+======================================================================
