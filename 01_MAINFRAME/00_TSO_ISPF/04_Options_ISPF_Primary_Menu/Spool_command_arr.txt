@@ -1,0 +1,6 @@
+=======================================================================
+MUDAR A ORDEM DA COLUNA DE UMA TABELA 
+=======================================================================
+Com o comando arr ? podemos selecionar a ordem que queremos visualizar uma tabela, utilizando / ou // para seleção do item e a(after) e b(before) para movimentar a coluna.
+
+Command ===> arr ?
